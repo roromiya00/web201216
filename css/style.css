@@ -35,11 +35,13 @@ header#hd { padding: 15px 0 ;  }
 #gnb>li>a { font-weight: bold; font-size: 18px;
             line-height: 46px; margin-left: 2em;}
 #gnb .d2 { background-color: black; top: calc(100% + 15px); left:15px;
-          padding: 10px 15px; width: 100px;}
+          padding: 10px 15px; width: 100px; display: none; }
 #gnb .d2 a { font-size: 0.9em; line-height: 1.5; color: white; }
 
 #gnb li:nth-child(1) .d2{ left: 15px; }
 #gnb li:nth-child(4) .d2{ width: 80px; }
+
+#gnb li:hover .d2 { display: block; }
 
 
 section#main {}
