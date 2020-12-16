@@ -30,11 +30,12 @@ a:hover{ color: #009688; }
 .disIB { display: inline-block; }
 
 /*100px 빼고 됨 */
-header#hd { padding: 15px 0 ;  }
+header#hd { }
+#hd img {  padding: 15px 0 ; }
 #hd a, #hd img { display: block; }
 #gnb>li>a { font-weight: bold; font-size: 18px;
-            line-height: 46px; margin-left: 2em;}
-#gnb .d2 { background-color: black; top: calc(100% + 15px); left:15px;
+            line-height: 46px; margin-left: 2em;  padding: 15px 0 ; }
+#gnb .d2 { background-color: black; top: 100%; left:15px;
           padding: 10px 15px; width: 100px; display: none; }
 #gnb .d2 a { font-size: 0.9em; line-height: 1.5; color: white; }
 
