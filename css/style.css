@@ -32,9 +32,11 @@ a:hover{ color: #009688; }
 header#hd { padding: 15px 0;}
 
 #hd a, #hd img { display: block;}
-#gnb>li { background: green;  height: 46px; }
+#gnb>li {  height: 46px;
+/* background: green;} */ }
 #gnb>li>a { font-weight: bold; font-size: 18px; line-height: 46px;
-            padding-left:2em; padding-bottom: 15px; background-color: yellow;}
+            padding-left:2em; padding-bottom: 15px;
+          /* background-color: yellow;} */}
 
 #gnb .d2 { background-color: black; top: calc(100% + 15px;); left: 15px;
           padding: 0px 15px; width:100px;
@@ -45,7 +47,10 @@ header#hd { padding: 15px 0;}
 #gnb li:nth-child(1) .d2{ left: 30px; }
 #gnb li:nth-child(4) .d2{ width: 70px; }
 
-#gnb li:hover .d2 { display: block; height: 120px; }
+/* 마우스가 올라간 대메뉴 li 속 소메뉴 .d2의 높이가 120이 되라  */
+#gnb > li:hover .d2 { display: block; height: 120px; }
+/* 마우스가 올라간 대메뉴 li 속 대메뉴 a의 색상 처리  */
+#gnb > li:hover > a { color: #009688 ;}
 
 
 section#main {}
