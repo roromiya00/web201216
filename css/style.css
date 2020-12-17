@@ -4,9 +4,8 @@ body { background-color: #ffffff; }
 body, ul, li, div, section, ol, dl, dt, dd, p, h1, h2, h3, h4, h5, h6{
   margin: 0; padding: 0;
   font-family: '맑은 고딕';
-  font-size: 16px;
-  color: #666666;
   line-height: 2;
+  font-size: 16px;
   letter-spacing: -1px;
 }
 ul, li, dl, dt, dd, ol { list-style: none; }
@@ -18,29 +17,30 @@ a:hover{ color: #009688; }
 .red { border-bottom: red 1px solid !important; }
 
 /*common*/
-.container { width: 1200px; margin: 0 auto; }
-.clear:after { content:""; display: block; clear: both; }
+.container { width: 1200px; margin: 0 auto;}
+.clear:after { content:""; display: block; clear: both;}
 .rel { position: relative; }
 .abs { position: absolute; }
 .fix { position: fixed; }
-.fl { float: left; }
-.fr { float: right; }
+.fl {float: left;}
+.fr {float: right; }
 .disB { display: block; }
-.disN { display: none; }
 .disIB { display: inline-block; }
+.disN { display: none; }
 
 /*100px 빼고 됨 */
-header#hd { }
-#hd img {  padding: 15px 0 ; }
-#hd a, #hd img { display: block; }
-#gnb>li>a { font-weight: bold; font-size: 18px;
-            line-height: 46px; margin-left: 2em;  padding: 15px 0 ; }
-#gnb .d2 { background-color: black; top: 100%; left:15px;
-          padding: 10px 15px; width: 100px; display: none; }
+header#hd { padding: 15px 0;}
+
+#hd a, #hd img { display: block;}
+#gnb>li { background: green;  height: 46px; }
+#gnb>li>a { font-weight: bold; font-size: 18px; line-height: 46px;
+            padding-left:2em; padding-bottom: 15px; background-color: yellow;}
+#gnb .d2 { background-color: black; display: none; top: calc(100% + 15px;); left: 15px;
+          padding: 10px 15px; width:100px; }
 #gnb .d2 a { font-size: 0.9em; line-height: 1.5; color: white; }
 
-#gnb li:nth-child(1) .d2{ left: 15px; }
-#gnb li:nth-child(4) .d2{ width: 80px; }
+#gnb li:nth-child(1) .d2{ left: 30px; }
+#gnb li:nth-child(4) .d2{ width: 70px; }
 
 #gnb li:hover .d2 { display: block; }
 
