@@ -1,9 +1,19 @@
 /* 웹표준 */
-body { background-color: #ffffff; }
+
+@font-face {
+    font-family: 'SeoulNamsanM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body { background-color: #ffffff;}
 
 body, ul, li, div, section, ol, dl, dt, dd, p, h1, h2, h3, h4, h5, h6{
   margin: 0; padding: 0;
-  font-family: '맑은 고딕';
+  font-family: 'SeoulNamsanM';
   line-height: 2;
   font-size: 16px;
   letter-spacing: -1px;
@@ -29,26 +39,37 @@ a:hover{ color: #009688; }
 .disN { display: none; }
 
 /*100px 빼고 됨 */
-header#hd { padding: 15px 0;}
+header#hd { padding: 15px 0; position: relative;}
+
+.back { height: 0px; background-color: black; position: absolute;
+        width: 100%; top:100%; left:0; transition: 0.5s;}
 
 #hd a, #hd img { display: block;}
-#gnb>li {  height: 46px;
+#gnb>li {  height: 46px; z-index: 1000;
 /* background: green;} */ }
 #gnb>li>a { font-weight: bold; font-size: 18px; line-height: 46px;
-            padding-left:2em; padding-bottom: 15px;
+          padding: 0 1em 15px ;
           /* background-color: yellow;} */}
 
-#gnb .d2 { background-color: black; top: calc(100% + 15px;); left: 15px;
+#gnb .d2 { background-color: black; top: calc(100% + 15px;); left: 3px;
           padding: 0px 15px; width:100px;
           height: 0px; transition: 0.5s; overflow: hidden;}
+#gnb .d2::before { content: ""; display: block; height: 15px;
+                  }
 
 #gnb .d2 a { font-size: 0.9em; line-height: 1.5; color: white; }
+#gnb .d2 a:hover { color: #009688 ;}
 
-#gnb li:nth-child(1) .d2{ left: 30px; }
+#gnb li:nth-child(1) .d2{ left: 10px; }
+#gnb li:nth-child(3) .d2{ left: 5px; }
 #gnb li:nth-child(4) .d2{ width: 70px; }
 
 /* 마우스가 올라간 대메뉴 li 속 소메뉴 .d2의 높이가 120이 되라  */
-#gnb > li:hover .d2 { display: block; height: 120px; }
+/* #gnb > li:hover .d2 { display: block; height: 120px; } */
+
+/* 전체 소메뉴 노출   */
+#gnb:hover .d2, #gnb:hover + .back { height: 100px;}
+
 /* 마우스가 올라간 대메뉴 li 속 대메뉴 a의 색상 처리  */
 #gnb > li:hover > a { color: #009688 ;}
 
